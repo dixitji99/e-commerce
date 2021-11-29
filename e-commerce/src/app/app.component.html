@@ -1,0 +1,21 @@
+<div class="container-fluid">
+  <div class="row bg-primary nav1">
+    <div class="col-lg-6 col-md-6 col-sm-12 pd-2 py-2">
+      <label for="iecommercelbl" class="fs-4 fc-w">eCommerce Site {{componentTitle}}</label>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 left1 pe-4">
+      <a class="px-2" routerLink="home" routerLinkActive="active">Home</a>
+      |
+      <a class="px-2" routerLink="myorders" routerLinkActive="active">My Orders</a>
+      |
+      <a class="px-2" routerLink="cart" routerLinkActive="active">Cart</a>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

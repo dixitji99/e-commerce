@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <app-bookui [isShow]="show" (diplayShow)="displayShow($event)"></app-bookui>
+        </div>
+    </div>
+</div>
+<div class="row showmore" [ngClass]='displayShow_ ? "":"dn"'>
+    <div class="col-12 py-4">
+        <label for="showmore" class="clickable" (click)="isShow()" >{{dataShow}}</label>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 mb-4">
+            <div class="fc-c g-1">
+                <label for="shippingAddress" class="fitem fw-normal fs-4">Shipping Address</label>
+                <p class="card p-4 fitem">xyz street, mo, 200012
+                    <strong>{{"123 123 123"}}</strong>
+                </p>
+                <div class="fc-r g-1">
+                    <button class="btn btn-primary fitem2">Edit</button>
+                    <button class="btn btn-primary fitem2">Save</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-cs-12 col-sm-12 col-md-6 col-lg-6 mb-4">
+            <div class="fc-c g-1">
+                <label for="shippingAddress" class="fitem fw-normal fs-4">Shipping Address</label>
+                <div *ngIf="!emptyCart;else nocart" class="fitem">
+                    <div class="card fc-r p-2 mb-3 g-1">
+                        <img src="assets/harry1.jpg" alt="" height="100px" width="80px" class="fi-c">
+                        <div class="fc-c fi-c">
+                            <label class="fw-bold">Book Title</label>
+                            <label>Book Author</label>
+                            <label>{{57|currency:"INR"}}</label>
+                        </div>
+                        <hr >
+                        <div class="fc-c g-2">
+                            <label for="quantity" class="fi-c">Quantity</label>
+                            <div class="fc-r mc-1 g-2 fi-c">
+                                <input type="button" value="-" (click)="subQuant()">
+                                <label for="quantvalue" style="border: 1px solid black;border-radius: 3px;" class="px-2" >{{quantityValue}}</label>
+                                <input type="button" value="+"  (click)="addQuant()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fc-r g-1">
+                        <button class="btn btn-primary fitem2">Checkout</button>
+                        <button class="btn btn-primary fitem2" (click)="cancelOrder()">Cancel</button>
+                    </div>
+                </div>
+                <ng-template #nocart>
+                    <div class="center">
+                        Empty Cart
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+
+    </div>
+</div>

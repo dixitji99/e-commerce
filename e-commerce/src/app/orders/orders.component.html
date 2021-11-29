@@ -1,0 +1,33 @@
+<ng-container *ngIf="true" >
+    <div class="container my-4 b-1" *ngFor="let book of orderedBook">
+        <div class="row bg-primary px-0 fc-w">
+            <div class="col-md-8">
+                <label for="orderPlaced">Order Placed: </label>
+                {{book.orderedAt}}
+            </div>
+            <div class="col-md-3 left">
+                <label for="status">Status: </label>
+                {{book.status}}
+            </div>
+        </div>
+        <div class="row" *ngFor="let item of book.items">
+            <div class="col flex-container-row">
+                <img src={{item.cover_image}} class="flex-item" alt="Image1">
+                <div class="flex-container-column">
+                    <span class="flex-item fs-3 fw-bold">{{item.title}}</span>
+                    <span class="flex-item">Quantity: {{item.qty}}</span>
+                    <span class="flex-item">Pages:{{item.pages}}</span>
+                    <span class="flex-item"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <hr>
+            </div>
+            <div class="col fs-4" style="text-align: right;color: green;">
+                <label class="fw-bold" style="color: black;">Grand Total:</label>{{book.grandTotal|currency:"INR":"symbol"}}
+            </div>
+        </div>
+    </div>
+</ng-container>

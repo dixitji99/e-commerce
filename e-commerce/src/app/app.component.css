@@ -1,0 +1,41 @@
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+a:hover{
+    color: rgb(0, 192, 144);
+}
+.active{
+    color: rgb(255, 123, 0);
+}
+.bg-lg{
+    background-color: lightgray;
+}
+.fc-w{
+    color: white;
+}
+.nav1{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.left1{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+@media screen and (max-width: 756px) {
+        
+    .left1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .fs-4{
+        display: flex;
+        justify-content: center;
+        font-weight: 700;
+        color: rgb(121, 204, 176);
+    }
+  }

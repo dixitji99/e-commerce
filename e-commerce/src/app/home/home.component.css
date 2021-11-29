@@ -1,0 +1,13 @@
+.showmore{
+    text-align: center;
+    color: coral;
+}
+.clickable{
+    cursor: pointer;
+}
+.clickable:hover{
+    color: rgb(201, 88, 47);    
+}
+.dn{
+    display: none;
+}
